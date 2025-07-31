@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    ports:
+      - "4002:4002"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env.local.container

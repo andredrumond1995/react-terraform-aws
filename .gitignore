@@ -1,0 +1,20 @@
+# Terraform secrets
+terraform.tfvars
+*.auto.tfvars 
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+.terraform
+terraform.tfstate
+*.tfplan
+terraform.tfstate.backup
+node_modules/
+.env
+dist/
+.vscode/
+.DS_Store
+.env.local
+.env.*
+!.env.example
+package-lock.json
+out/
+.next/
