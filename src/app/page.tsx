@@ -15,7 +15,6 @@ const getApiUrl = () => {
   return process.env.NEXT_PUBLIC_API_URL;
 };
 const API_URL = getApiUrl() as string;
-console.log('API_URL - src/app/page.tsx - =>', API_URL);
 export default function Home() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,7 +26,6 @@ export default function Home() {
   const getTodos = async () => {
     setLoading(true);
     try {
-      console.log('API_URL - src/app/page.tsx - =>', API_URL);
       const res = await fetch(API_URL);
       const data = await res.json();
       setTodos(Array.isArray(data) ? data : data.data || []);
